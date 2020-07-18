@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InnerContent renders html content in custom tag 1`] = `
+<section
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "
+          <h1>Hello</h1>
+          <p>bla bla <b>bla</b></p>
+      ",
+    }
+  }
+/>
+`;
+
+exports[`InnerContent renders html content in div by default 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "
+          <h1>Hello</h1>
+          <p>bla bla <b>bla</b></p>
+      ",
+    }
+  }
+/>
+`;
+
+exports[`InnerContent sanitize XSS 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<p>abc</p>",
+    }
+  }
+/>
+`;
